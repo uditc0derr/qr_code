@@ -20,14 +20,14 @@ export default function App() {
     })
   ).current;
 
-  // Attach QRCode once
+
   useEffect(() => {
     if (qrRef.current) {
       qrCode.append(qrRef.current);
     }
   }, [qrCode]);
 
-  // Update QRCode data live
+
   useEffect(() => {
     qrCode.update({ data: text || " " });
   }, [text, qrCode]);
@@ -41,7 +41,7 @@ export default function App() {
       style={{ backgroundColor: "#0C0C0C" }}
       className="min-h-screen flex flex-col items-center justify-center p-6"
     >
-      {/* Header */}
+
       <h1
         style={{
           color: "#FFFFFF",
@@ -53,7 +53,7 @@ export default function App() {
         Design QR Codes
       </h1>
 
-      {/* Card */}
+
       <div
         style={{
           backgroundColor: "#111111",
@@ -63,7 +63,7 @@ export default function App() {
           padding: "60px",
         }}
       >
-        {/* QR Preview */}
+
         <div
           ref={qrRef}
           style={{
@@ -76,7 +76,7 @@ export default function App() {
           }}
         />
 
-        {/* Buttons */}
+
         <div className="flex gap-3 mt-4 justify-center">
           <button
             onClick={() => download("svg")}
@@ -111,7 +111,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* Input */}
+
       <div style={{ marginTop: "24px", width: "100%", maxWidth: "400px" }}>
         <input
           type="text"
