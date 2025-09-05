@@ -20,13 +20,11 @@ export default function App() {
     })
   ).current;
 
-
   useEffect(() => {
     if (qrRef.current) {
       qrCode.append(qrRef.current);
     }
   }, [qrCode]);
-
 
   useEffect(() => {
     qrCode.update({ data: text || " " });
@@ -39,16 +37,11 @@ export default function App() {
   return (
     <div
       style={{ backgroundColor: "#0C0C0C" }}
-      className="min-h-screen flex flex-col items-center justify-center p-6"
+      className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6"
     >
-
       <h1
-        style={{
-          color: "#FFFFFF",
-          fontSize: "24px",
-          fontWeight: 600,
-          marginBottom: "24px",
-        }}
+        style={{ color: "#FFFFFF", fontWeight: 600 }}
+        className="text-xl sm:text-2xl mb-6 text-center"
       >
         Design QR Codes
       </h1>
@@ -60,24 +53,21 @@ export default function App() {
           border: "1px solid #2A2A2A",
           borderRadius: "12px",
           boxShadow: "0 4px 16px rgba(0,0,0,0.45)",
-          padding: "60px",
         }}
+        className="w-full max-w-md p-6 sm:p-12 flex flex-col items-center"
       >
 
         <div
           ref={qrRef}
           style={{
             backgroundColor: "#1A1A1A",
-            padding: "32px",
             borderRadius: "16px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
           }}
+          className="flex justify-center items-center w-full max-w-[250px] aspect-square p-4 sm:p-8"
         />
 
 
-        <div className="flex gap-3 mt-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 mt-6 w-full">
           <button
             onClick={() => download("svg")}
             style={{
@@ -85,11 +75,8 @@ export default function App() {
               color: "#FFFFFF",
               borderRadius: "8px",
               boxShadow: "0 2px 6px rgba(0,0,0,0.35)",
-              padding: "8px 16px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
             }}
+            className="flex items-center justify-center gap-2 px-4 py-2 w-full sm:w-auto"
           >
             <FiDownload size={18} /> SVG
           </button>
@@ -100,11 +87,8 @@ export default function App() {
               color: "#FFFFFF",
               borderRadius: "8px",
               boxShadow: "0 2px 6px rgba(0,0,0,0.35)",
-              padding: "8px 16px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
             }}
+            className="flex items-center justify-center gap-2 px-4 py-2 w-full sm:w-auto"
           >
             <FiDownload size={18} /> PNG
           </button>
@@ -112,26 +96,28 @@ export default function App() {
       </div>
 
 
-      <div style={{ marginTop: "24px", width: "100%", maxWidth: "400px" }}>
+      <div className="mt-6 w-full max-w-md">
         <input
           type="text"
           placeholder="Enter URL or text to encode"
           style={{
-            width: "100%",
-            padding: "12px 16px",
             borderRadius: "8px",
             backgroundColor: "#111111",
             color: "#FFFFFF",
             border: "1px solid #2A2A2A",
             outline: "none",
           }}
+          className="w-full px-4 py-3 text-base sm:text-lg"
           value={text}
           onChange={(e) => setText(e.target.value)}
           onFocus={(e) => (e.target.style.border = "1px solid #FF6600")}
           onBlur={(e) => (e.target.style.border = "1px solid #2A2A2A")}
         />
         {!text && (
-          <p style={{ color: "#FF4D4D", fontSize: "14px", marginTop: "8px" }}>
+          <p
+            style={{ color: "#FF4D4D" }}
+            className="text-sm mt-2 sm:text-base"
+          >
             Please enter content to generate QR code
           </p>
         )}
