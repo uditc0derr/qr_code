@@ -1,12 +1,51 @@
-# React + Vite
+# 🎨 QR Code Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and modern QR code generator built with React and Vite. This application allows you to create custom-styled QR codes from any text or URL and download them in SVG or PNG format. 🚀
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **📱 Responsive Design:** A clean, dark-themed interface that works beautifully on all devices.
+-   **🔄 Real-time Generation:** The QR code updates instantly as you type.
+-   **🎨 Customizable Styles:** The QR code is styled with rounded corners and custom colors for a modern look.
+-   **📥 Multiple Download Options:** Download your generated QR code as either an SVG or a PNG file with the click of a button.
+-   **⚡ Fast and Efficient:** Built with Vite for a lightning-fast development experience and optimized performance.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **Frontend:** React.js
+-   **Build Tool:** Vite
+-   **QR Code Generation:** `qr-code-styling` library
+-   **Icons:** `react-icons` and `lucide-react`
+-   **Styling:** Tailwind CSS
+
+---
+
+## 🚀 Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+-   Node.js (v18.0 or later recommended)
+-   npm or yarn package manager
+
+### ⚙️ Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone [https://github.com/uditc0derr/qr_code.git](https://github.com/uditc0derr/qr_code.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
+    cd qr_code
+    ```
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+
+### ▶️ Running the Application
+
+To start the development server, run the following command:
+```sh
+npm run dev
